@@ -22,6 +22,9 @@ presentation and resources for NorPreM bioinformatics workshop in March 2024
   - general (install, best practice)
   - nf-core template
   - stubbing
+- tso500_nxf_workflow
+  - status
+  - demonstration 
 
 ### Resources
 
