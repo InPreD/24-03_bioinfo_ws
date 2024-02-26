@@ -1,37 +1,61 @@
-<!--
+---
+marp: true
 theme: default
-headingDivider: 2 
-paginate: true
--->
+---
 
-# 24-03_bioinfo_ws
+# Bioinformatics session
 
-presentation and resources for NorPreM bioinformatics workshop in March 2024
+A two-day workshop for bioinformaticians and molecular biologists with focus on the TSO500 pipeline in InPreD
 
-## Project collaboration within NorPreM
+---
 
-- setup
+## Overview
+
+1. Setup
+2. Development & Collaboration
+3. Nextflow
+4. tso500_nxf_workflow
+5. Python
+
+---
+
+## 1. Setup
+
+---
+
+## 1. Setup
+
   - github account
   - addition to InPreD organisation
-- development
+
+---
+
+## 2. Development & Collaboration
+
   - short git introduction (basic git commands)
-  - devcontainers
   - branching system (gitflow workflow)
   - github actions (linting, testing, building)
-  - deployment (container image)
   - pull requests (best practice)
   - release and semantic versioning
-- python
-  - general (best practice, cli)
-  - unit testing (pytest)
+  - licensing
+
+---
+
 - nextflow
   - general (install, best practice)
   - nf-core template
   - stubbing
+---
 - tso500_nxf_workflow
   - status
   - demonstration 
+---
 
+- python
+  - general (best practice, cli)
+  - unit testing (pytest)
+
+--- 
 ### Resources
 
 - [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
