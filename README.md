@@ -25,14 +25,29 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ## 1. Setup
 
-  - github account
-  - addition to InPreD organisation
+## Create a GitHub account
+
+- go to <https://github.com/> and click on `Sign up`
+
+![](img/github01.png)
+
+---
+
+## 1. Setup
+
+## Be added to InPreD organisation at GitHub
+
+---
+
+## 1. Resources
+
+- [Getting started with your GitHub account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
 
 ---
 
 ## 2. Development & Collaboration
 
-  - short git introduction (basic git commands)
+  - short git introduction (basic git commands, optional)
   - branching system (gitflow workflow)
   - github actions (linting, testing, building)
   - pull requests (best practice)
