@@ -23,13 +23,25 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ---
 
-## 1. Setup
-
 ## Create a GitHub account
 
 - go to <https://github.com/> and click on `Sign up`
 
 ![](img/github01.png)
+
+---
+
+## Create a GitHub account
+
+- enter your email
+
+![](img/github02.png)
+
+---
+
+## Create a GitHub account
+
+- set a password
 
 ---
 
@@ -47,30 +59,37 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ## 2. Development & Collaboration
 
-  - short git introduction (basic git commands, optional)
-  - branching system (gitflow workflow)
-  - github actions (linting, testing, building)
-  - pull requests (best practice)
-  - release and semantic versioning
-  - licensing
+- short git introduction (basic git commands, optional)
+- branching system (gitflow workflow)
+- github actions (linting, testing, building)
+- pull requests (best practice)
+- release and semantic versioning
+- licensing
 
 ---
 
-- nextflow
-  - general (install, best practice)
-  - nf-core template
-  - stubbing
----
-- tso500_nxf_workflow
-  - status
-  - demonstration 
+# 3. Nextflow
+
+- general (install, best practice)
+- nf-core template
+- stubbing
+
 ---
 
-- python
-  - general (best practice, cli)
-  - unit testing (pytest)
+# 4. `tso500_nxf_workflow`
+
+- status
+- demonstration 
+
+---
+
+5. Python
+
+- general (best practice, cli)
+- unit testing (pytest)
 
 --- 
+
 ### Resources
 
 - [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
