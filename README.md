@@ -206,12 +206,6 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 - building, testing and deploying directly from GitHub
 - set up by adding yaml instructions to `.github/workflows`
 
----
-
-### GitHub Actions
-
-#### example 
-
 ```yaml
 name: GitHub Actions Demo
 on: [push]
@@ -221,6 +215,13 @@ jobs:
     steps:
       - run: echo "Hello world!"
 ```
+
+---
+
+### GitHub Actions
+
+![width:700px](img/github_actions01.png)
+![width:700px](img/github_actions02.png)
 
 ---
 
