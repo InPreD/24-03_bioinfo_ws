@@ -7,7 +7,7 @@ theme: default
 
 A two-day workshop for bioinformaticians and molecular biologists with focus on the TSO500 pipeline in InPreD
 
-![bg vertical](img/bergen01.png)
+![bg right](img/bergen01.png)
 
 ---
 
@@ -69,8 +69,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - solve the puzzle
 
-![](img/github06.png)
-![bg right](img/github07.png)
+![](img/github06-07.png)
 
 ---
 
@@ -94,8 +93,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - select the desired options
 
-![left](img/github10.png)
-![right](img/github11.png)
+![](img/github10-11.png)
 
 ---
 
@@ -103,7 +101,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - choose the free plan
 
-![bg right](img/github12.png)
+![height:450px](img/github12.png)
 
 ---
 
