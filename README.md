@@ -183,12 +183,16 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ## 2. Development & Collaboration
 
-### Branching model: Gitflow
+### Branching model: simplied Gitflow workflow
 
 - start with two branches to record project history: `main` and `develop`
 - each new feature resides in its own branch (feature branch)
 - feature branch is generally created off latest `develop` commit
 - upon feature completion, feature branch is merged into `develop`
+
+---
+
+### Branching model: simplied Gitflow workflow
 
 ![](img/gitflow01.png)
 
