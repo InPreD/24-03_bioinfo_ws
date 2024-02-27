@@ -67,18 +67,8 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - solve the puzzle
 
-<div>
-    <table>
-	    <tr>
-    	    <td style="padding:10px">
-        	    <img src="img/github06.png"/>
-      	    </td>
-            <td style="padding:10px">
-            	<img src="img/github07.png"/>
-            </td>
-        </tr>
-    </table>
-</div>
+![width:50px](img/github06.png)
+![width:50px](img/github07.png)
 
 ---
 
@@ -86,7 +76,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - create your account
 
-![](img/github08.png)
+![width:150px](img/github08.png)
 
 ---
 
@@ -102,18 +92,8 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - select the desired options
 
-<div>
-    <table>
-	    <tr>
-    	    <td style="padding:10px">
-        	    <img src="img/github10.png"/>
-      	    </td>
-            <td style="padding:10px">
-            	<img src="img/github11.png"/>
-            </td>
-        </tr>
-    </table>
-</div>
+![left](img/github10.png)
+![right](img/github11.png)
 
 ---
 
