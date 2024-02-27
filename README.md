@@ -69,8 +69,8 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - solve the puzzle
 
-![width:50px](img/github06.png)
-![width:50px](img/github07.png)
+![](img/github06.png)
+![bg right](img/github07.png)
 
 ---
 
@@ -78,7 +78,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - create your account
 
-![width:150px](img/github08.png)
+![width:500px](img/github08.png)
 
 ---
 
@@ -86,7 +86,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - find the activation code in the email you received
 
-![](img/github09.png)
+![width:700px](img/github09.png)
 
 ---
 
@@ -103,7 +103,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - choose the free plan
 
-![](img/github12.png)
+![bg right](img/github12.png)
 
 ---
 
