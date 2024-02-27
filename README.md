@@ -43,6 +43,86 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - set a password
 
+![](img/github03.png)
+
+---
+
+## Create a GitHub account
+
+- choose a username
+
+![](img/github04.png)
+
+---
+
+## Create a GitHub account
+
+- choose email preferences
+
+![](img/github05.png)
+
+---
+
+## Create a GitHub account
+
+- solve the puzzle
+
+<div>
+    <table>
+	    <tr>
+    	    <td style="padding:10px">
+        	    <img src="img/github06.png"/>
+      	    </td>
+            <td style="padding:10px">
+            	<img src="img/github07.png"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
+---
+
+## Create a GitHub account
+
+- create your account
+
+![](img/github08.png)
+
+---
+
+## Create a GitHub account
+
+- find the activation code in the email you received
+
+![](img/github09.png)
+
+---
+
+## Create a GitHub account
+
+- select the desired options
+
+<div>
+    <table>
+	    <tr>
+    	    <td style="padding:10px">
+        	    <img src="img/github10.png"/>
+      	    </td>
+            <td style="padding:10px">
+            	<img src="img/github11.png"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
+---
+
+## Create a GitHub account
+
+- choose the free plan
+
+![](img/github12.png)
+
 ---
 
 ## 1. Setup
@@ -68,7 +148,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ---
 
-# 3. Nextflow
+## 3. Nextflow
 
 - general (install, best practice)
 - nf-core template
@@ -76,14 +156,14 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ---
 
-# 4. `tso500_nxf_workflow`
+## 4. `tso500_nxf_workflow`
 
 - status
 - demonstration 
 
 ---
 
-5. Python
+## 5. Python
 
 - general (best practice, cli)
 - unit testing (pytest)
