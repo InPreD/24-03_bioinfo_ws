@@ -198,7 +198,32 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ---
 
-- github actions (linting, testing, building)
+## 2. Development & Collaboration
+
+### GitHub Actions
+
+- continuous integration (CI) and continuous deployment (CD)
+- building, testing and deploying directly from GitHub
+- set up by adding yaml instructions to `.github/workflows`
+
+---
+
+### GitHub Actions
+
+#### example 
+
+```yaml
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world!"
+```
+
+---
+
 - pull requests (best practice)
 - release and semantic versioning
 - licensing
@@ -209,6 +234,7 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 - [About Git](https://docs.github.com/en/get-started/using-git/about-git)
 - [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+- [GitHub Actions](https://docs.github.com/en/actions/quickstart)
 
 ---
 
