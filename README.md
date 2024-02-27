@@ -220,8 +220,82 @@ jobs:
 
 ### GitHub Actions
 
-![width:700px](img/github_actions01.png)
-![width:700px](img/github_actions02.png)
+```yaml
+name: Docker Build
+on:
+  push:
+    branches:
+      - main
+      - develop
+    tags:
+      - '*.*.*'
+
+jobs:
+  test:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Check out the repo
+        uses: actions/checkout@v4
+      - 
+        name: Unit testing 
+        uses: fylein/python-pytest-github-action@v2
+        with:
+          args: pip3 install -r requirements.txt && pytest
+  ...
+  ```
+
+---
+
+### GitHub Actions
+
+```yaml
+...
+  build:
+    name: Build Image
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - 
+        name: Check out the repo
+        uses: actions/checkout@v4
+      -
+        name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+      - 
+        name: Docker Meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            inpred/local_app_prepper
+          tags: |
+            latest
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+      - 
+        name: Login to Dockerhub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - 
+        name: Build and push image to Docker Hub
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+```
+
+---
+
+### GitHub Actions
+
+![width:900px](img/github_actions01.png)
+![width:900px](img/github_actions02.png)
 
 ---
 
