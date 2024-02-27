@@ -187,25 +187,93 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-theme="default" style="--theme:default;">
 <h3 id="github-actions-1">GitHub Actions</h3>
-<p><img src="img/github_actions01.png" alt="" style="width:700px;" /><br />
-<img src="img/github_actions02.png" alt="" style="width:700px;" /></p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Build</span>
+<span class="hljs-attr">on:</span>
+  <span class="hljs-attr">push:</span>
+    <span class="hljs-attr">branches:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">main</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">develop</span>
+    <span class="hljs-attr">tags:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;*.*.*&#x27;</span>
+
+<span class="hljs-attr">jobs:</span>
+  <span class="hljs-attr">test:</span>
+    <span class="hljs-attr">name:</span> <span class="hljs-string">Run</span> <span class="hljs-string">unit</span> <span class="hljs-string">tests</span>
+    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span>
+    <span class="hljs-attr">steps:</span>
+      <span class="hljs-bullet">-</span> 
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Check</span> <span class="hljs-string">out</span> <span class="hljs-string">the</span> <span class="hljs-string">repo</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span>
+      <span class="hljs-bullet">-</span> 
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Unit</span> <span class="hljs-string">testing</span> 
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">fylein/python-pytest-github-action@v2</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">args:</span> <span class="hljs-string">pip3</span> <span class="hljs-string">install</span> <span class="hljs-string">-r</span> <span class="hljs-string">requirements.txt</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">pytest</span>
+  <span class="hljs-string">...</span>
+</code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-theme="default" style="--theme:default;">
 <h3 id="github-actions-2">GitHub Actions</h3>
-<p><img src="img/github_actions03.png" alt="" /></p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-string">...</span>
+  <span class="hljs-attr">build:</span>
+    <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">Image</span>
+    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span>
+    <span class="hljs-attr">needs:</span> <span class="hljs-string">test</span>
+    <span class="hljs-attr">steps:</span>
+      <span class="hljs-bullet">-</span> 
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Check</span> <span class="hljs-string">out</span> <span class="hljs-string">the</span> <span class="hljs-string">repo</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span>
+      <span class="hljs-bullet">-</span>
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Lint</span> <span class="hljs-string">Dockerfile</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">hadolint/hadolint-action@v3.1.0</span>
+      <span class="hljs-bullet">-</span> 
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Meta</span>
+        <span class="hljs-attr">id:</span> <span class="hljs-string">meta</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/metadata-action@v5</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">images:</span> <span class="hljs-string">|
+            inpred/local_app_prepper
+</span>          <span class="hljs-attr">tags:</span> <span class="hljs-string">|
+            latest
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+</span>      <span class="hljs-bullet">-</span> 
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Login</span> <span class="hljs-string">to</span> <span class="hljs-string">Dockerhub</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v3</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.DOCKERHUB_USERNAME</span> <span class="hljs-string">}}</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.DOCKERHUB_TOKEN</span> <span class="hljs-string">}}</span>
+      <span class="hljs-bullet">-</span> 
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">and</span> <span class="hljs-string">push</span> <span class="hljs-string">image</span> <span class="hljs-string">to</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Hub</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/build-push-action@v5</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">push:</span> <span class="hljs-literal">true</span>
+          <span class="hljs-attr">tags:</span> <span class="hljs-string">${{</span> <span class="hljs-string">steps.meta.outputs.tags</span> <span class="hljs-string">}}</span>
+          <span class="hljs-attr">labels:</span> <span class="hljs-string">${{</span> <span class="hljs-string">steps.meta.outputs.labels</span> <span class="hljs-string">}}</span>
+</code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-theme="default" style="--theme:default;">
 <h3 id="github-actions-3">GitHub Actions</h3>
-<p><img src="img/github_actions04.png" alt="" /></p>
+<p><img src="img/github_actions01.png" alt="" style="width:900px;" /><br />
+<img src="img/github_actions02.png" alt="" style="width:900px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-theme="default" style="--theme:default;">
+<h3 id="github-actions-4">GitHub Actions</h3>
+<p><img src="img/github_actions03.png" alt="" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-theme="default" style="--theme:default;">
+<h3 id="github-actions-5">GitHub Actions</h3>
+<p><img src="img/github_actions04.png" alt="" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="default" style="--theme:default;">
 <ul>
 <li>pull requests (best practice)</li>
 <li>release and semantic versioning</li>
 <li>licensing</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-theme="default" style="--theme:default;">
 <h2 id="2-resources">2. Resources</h2>
 <ul>
 <li><a href="https://docs.github.com/en/get-started/using-git/about-git">About Git</a></li>
@@ -213,7 +281,7 @@
 <li><a href="https://docs.github.com/en/actions/quickstart">GitHub Actions</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-theme="default" style="--theme:default;">
 <h2 id="3-nextflow">3. Nextflow</h2>
 <ul>
 <li>general (install, best practice)</li>
@@ -221,21 +289,21 @@
 <li>stubbing</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-theme="default" style="--theme:default;">
 <h2 id="4-tso500_nxf_workflow">4. <code>tso500_nxf_workflow</code></h2>
 <ul>
 <li>status</li>
 <li>demonstration</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-theme="default" style="--theme:default;">
 <h2 id="5-python">5. Python</h2>
 <ul>
 <li>general (best practice, cli)</li>
 <li>unit testing (pytest)</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-theme="default" style="--theme:default;">
 <h3 id="resources">Resources</h3>
 <ul>
 <li><a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions">github actions</a></li>
