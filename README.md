@@ -225,6 +225,18 @@ jobs:
 
 ---
 
+### GitHub Actions
+
+![](img/github_actions03.png)
+
+---
+
+### GitHub Actions
+
+![](img/github_actions04.png)
+
+---
+
 - pull requests (best practice)
 - release and semantic versioning
 - licensing
