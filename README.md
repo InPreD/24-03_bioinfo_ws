@@ -181,7 +181,16 @@ A two-day workshop for bioinformaticians and molecular biologists with focus on 
 
 ---
 
-### Branching strategy - Gitflow
+## 2. Development & Collaboration
+
+### Branching model: Gitflow
+
+- start with two branches to record project history: `main` and `develop`
+- each new feature resides in its own branch (feature branch)
+- feature branch is generally created off latest `develop` commit
+- upon feature completion, feature branch is merged into `develop`
+
+![](img/gitflow01.png)
 
 ---
 
