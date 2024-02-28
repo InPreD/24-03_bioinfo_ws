@@ -413,7 +413,7 @@ $ git push
 - if you still want to work on the pull request, you can `Convert to draft` to let the reviewers know that it is not done yet
 - otherwise you can just wait for them to review your changes
 
-![](img/github_workflow13.png)
+![width:800px](img/github_workflow13.png)
 
 ---
 
