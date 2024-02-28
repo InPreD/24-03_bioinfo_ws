@@ -529,11 +529,11 @@ $ git push
 
 #### Semantic versioning
 
-- version tag should be MAJOR.MINOR.PATCH
+- version tag should be **MAJOR.MINOR.PATCH**
 - you increment one of the three depending on the change
-  - MAJOR: version when you make incompatible API changes
-  - MINOR: version when you add functionality in a backward compatible manner
-  - PATCH: version when you make backward compatible bug fixes
+  - **MAJOR**: version when you make incompatible API changes
+  - **MINOR**: version when you add functionality in a backward compatible manner
+  - **PATCH**: version when you make backward compatible bug fixes
 
 ---
 
