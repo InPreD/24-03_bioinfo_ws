@@ -537,7 +537,21 @@ $ git push
 
 ---
 
-- licensing
+### Release
+
+- when you are satisfied with your release, `Publish release`
+
+![](img/github_release04.png)
+
+---
+
+## 2. Development & Collaboration
+
+### Licensing
+
+- let's discuss
+
+![](img/licensing01.png)
 
 ---
 
@@ -547,6 +561,7 @@ $ git push
 - [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 - [GitHub Actions](https://docs.github.com/en/actions/quickstart)
 - [Semantic versioning](https://semver.org/)
+- [Licensing](https://choosealicense.com/)
 
 ---
 
