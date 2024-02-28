@@ -346,6 +346,31 @@ jobs:
 
 ---
 
+### GitHub workflow
+
+- go to pull requests and create a `New pull request`
+
+![width:900px](img/github_workflow07.png)
+
+---
+
+### GitHub workflow
+
+- go to pull requests and create a `New pull request`
+
+![width:900px](img/github_workflow07.png)
+![width:900px](img/github_workflow08.png)
+
+---
+
+### GitHub workflow
+
+- choose `develop` as `base` and your new feature branch for `compare`
+
+![](img/github_workflow09.png)
+
+---
+
 - release and semantic versioning
 - licensing
 
