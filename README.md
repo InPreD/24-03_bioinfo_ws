@@ -348,7 +348,7 @@ jobs:
 
 ### GitHub workflow
 
-- load the new branch into your local repository, check it out and start working
+- load the new branch to your local repository, check it out and start working
 - push your changes back to the remote
 
 ```bash
@@ -371,10 +371,15 @@ $ git push
 
 ### GitHub workflow
 
-- once you have a fork, `git clone` your forked repository, create a new branch and work on that
-- `git push` your changes back to the forked remote
+![width:400px](img/github_workflow08.png)
 
-![width:900px](img/github_workflow08.png)
+---
+
+### GitHub workflow
+
+- once you have a fork, `git clone` your forked repository
+- create a new branch and work on that
+- `git push` your changes back to the forked remote
 
 ---
 
@@ -392,6 +397,32 @@ $ git push
 - choose `develop` as `base` and your new feature branch for `compare`
 
 ![](img/github_workflow11.png)
+
+---
+
+### GitHub workflow
+
+- `assign yourself`, add at least one reviewer, provide some context and `Create pull request`
+
+![](img/github_workflow11.png)
+
+---
+
+### GitHub workflow
+
+- if you still want to work on the pull request, you can `Convert to draft` to let the reviewers know that it is not done yet
+- otherwise you can just wait for them to review your changes
+
+![](img/github_workflow12.png)
+
+---
+
+### GitHub workflow
+
+- as a reviewer, make your you check your email notifications to see if there is pull requests waiting for you
+- open the pull request and start the review in the `Files changed` tab
+
+![](img/github_workflow13.png)
 
 ---
 
