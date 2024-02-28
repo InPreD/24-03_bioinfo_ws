@@ -499,8 +499,6 @@ $ git push
 - releases should be from `main` branch
 - good practice is to open a pull request for `develop` into `main` when you are done with the desired features
 
-![width:700px](img/github_release01.png)
-
 ---
 
 ### Release
