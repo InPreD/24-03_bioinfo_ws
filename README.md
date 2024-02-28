@@ -402,9 +402,9 @@ $ git push
 
 ### GitHub workflow
 
-- `assign yourself`, add at least one reviewer, provide some context and `Create pull request`
+- `assign yourself`, add at least one reviewer (cog icon), provide some context and `Create pull request`
 
-![](img/github_workflow11.png)
+![](img/github_workflow12.png)
 
 ---
 
@@ -413,7 +413,7 @@ $ git push
 - if you still want to work on the pull request, you can `Convert to draft` to let the reviewers know that it is not done yet
 - otherwise you can just wait for them to review your changes
 
-![](img/github_workflow12.png)
+![](img/github_workflow13.png)
 
 ---
 
@@ -422,7 +422,56 @@ $ git push
 - as a reviewer, make your you check your email notifications to see if there is pull requests waiting for you
 - open the pull request and start the review in the `Files changed` tab
 
-![](img/github_workflow13.png)
+![](img/github_workflow14.png)
+
+---
+
+### GitHub workflow
+
+- you can leave comments and suggestions in the code by hovering over the line with the changes and clicking on `+`
+
+![](img/github_workflow15.png)
+
+---
+
+### GitHub workflow
+
+- you can type your comment
+
+![](img/github_workflow16.png)
+
+---
+
+### GitHub workflow
+
+- or you leave a suggestion, ideally you click `Start a review` to initialise the reviewing process
+
+![width:700px](img/github_workflow17.png)
+![width:700px](img/github_workflow18.png)
+
+---
+
+### GitHub workflow
+
+- when you are done with reviewing, `Finish your review`
+
+![width:700px](img/github_workflow19.png)
+
+---
+
+### GitHub workflow
+
+- again, leave a comment if you like, and choose if you just want to `Comment`, `Approve` or `Request changes`
+
+![width:700px](img/github_workflow20.png)
+
+---
+
+### GitHub workflow
+
+- you can add a general comment to the pull request under `Conversation`
+
+![width:700px](img/github_workflow21.png)
 
 ---
 
