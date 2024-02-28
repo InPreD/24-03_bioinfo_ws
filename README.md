@@ -315,7 +315,7 @@ jobs:
 
 ### GitHub workflow
 
-- go to issues and create a new issue
+- go to issues and create a `New issue`
 
 ![width:900px](img/github_workflow01.png)
 ![width:900px](img/github_workflow02.png)
@@ -341,6 +341,8 @@ jobs:
 ### GitHub workflow
 
 - `Change branch source` to `develop` and `Create branch`
+- get the new branch locally using `git pull` and `git checkout 4-new-fancy-feature`
+- start making changes and push them to the remote repository
 
 ![](img/github_workflow05-06.png)
 
@@ -348,15 +350,7 @@ jobs:
 
 ### GitHub workflow
 
-- go to pull requests and create a `New pull request`
-
-![width:900px](img/github_workflow07.png)
-
----
-
-### GitHub workflow
-
-- go to pull requests and create a `New pull request`
+- for repositories you don't have access to, create a fork
 
 ![width:900px](img/github_workflow07.png)
 ![width:900px](img/github_workflow08.png)
@@ -365,9 +359,18 @@ jobs:
 
 ### GitHub workflow
 
+- when you are done, go to pull requests and create a `New pull request`
+
+![width:900px](img/github_workflow09.png)
+![width:900px](img/github_workflow10.png)
+
+---
+
+### GitHub workflow
+
 - choose `develop` as `base` and your new feature branch for `compare`
 
-![](img/github_workflow09.png)
+![](img/github_workflow11.png)
 
 ---
 
