@@ -422,7 +422,7 @@ $ git push
 - as a reviewer, make your you check your email notifications to see if there is pull requests waiting for you
 - open the pull request and start the review in the `Files changed` tab
 
-![](img/github_workflow14.png)
+![width:800px](img/github_workflow14.png)
 
 ---
 
@@ -471,11 +471,74 @@ $ git push
 
 - you can add a general comment to the pull request under `Conversation`
 
-![width:700px](img/github_workflow21.png)
+![](img/github_workflow21.png)
 
 ---
 
-- release and semantic versioning
+### GitHub workflow
+
+- after the reviewer left their comments and suggestions, you can address them one by one by replying or applying the suggested changes
+- whenever a certain comment/suggestion is handled (discussion comes to conclusion, suggestion was applied), you can resolve it
+
+![](img/github_workflow22.png)
+
+---
+
+### GitHub workflow
+
+- as soon as the reviewers gave you an approval, you can finally `Merge pull request`
+
+![](img/github_workflow23.png)
+
+---
+
+## 2. Development & Collaboration
+
+### Release
+
+- releases should be from `main` branch
+- good practice is to open a pull request for `develop` into `main` when you are done with the desired features
+
+![width:700px](img/github_release01.png)
+
+---
+
+### Release
+
+- whenever you are ready for a new release, `create a new release`
+
+![](img/github_release01.png)
+
+---
+
+### Release
+
+- add a title and a description for your release and `Choose a tag`
+
+![](img/github_release02.png)
+
+---
+
+### Release
+
+- ideally, you choose a tag according to semantic versioning
+
+![](img/github_release03.png)
+
+---
+
+### Release
+
+#### Semantic versioning
+
+- version tag should be MAJOR.MINOR.PATCH
+- you increment one of the three depending on the change
+  - MAJOR: version when you make incompatible API changes
+  - MINOR: version when you add functionality in a backward compatible manner
+  - PATCH: version when you make backward compatible bug fixes
+
+---
+
 - licensing
 
 ---
@@ -485,6 +548,7 @@ $ git push
 - [About Git](https://docs.github.com/en/get-started/using-git/about-git)
 - [Gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 - [GitHub Actions](https://docs.github.com/en/actions/quickstart)
+- [Semantic versioning](https://semver.org/)
 
 ---
 
@@ -512,7 +576,5 @@ $ git push
 
 ### Resources
 
-- [github actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 - [nf-core](https://nf-co.re/)
 - [pytest unittesting](https://www.datacamp.com/tutorial/pytest-tutorial-a-hands-on-guide-to-unit-testing)
-- [semantic versioning](https://semver.org/)
