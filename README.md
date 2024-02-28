@@ -341,10 +341,23 @@ jobs:
 ### GitHub workflow
 
 - `Change branch source` to `develop` and `Create branch`
-- get the new branch locally using `git pull` and `git checkout 4-new-fancy-feature`
-- start making changes and push them to the remote repository
 
-![](img/github_workflow05-06.png)
+![width:800px](img/github_workflow05-06.png)
+
+---
+
+### GitHub workflow
+
+- load the new branch into your local repository, check it out and start working
+- push your changes back to the remote
+
+```bash
+$ git pull
+$ git checkout 4-new-fancy-feature
+$ git add README.md
+$ git commit -m "docs: updating docs"
+$ git push
+```
 
 ---
 
@@ -353,6 +366,14 @@ jobs:
 - for repositories you don't have access to, create a fork
 
 ![width:900px](img/github_workflow07.png)
+
+---
+
+### GitHub workflow
+
+- once you have a fork, `git clone` your forked repository, create a new branch and work on that
+- `git push` your changes back to the forked remote
+
 ![width:900px](img/github_workflow08.png)
 
 ---
