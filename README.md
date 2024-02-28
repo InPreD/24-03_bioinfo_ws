@@ -311,7 +311,41 @@ jobs:
 
 ---
 
-- pull requests (best practice)
+## 2. Development & Collaboration
+
+### GitHub workflow
+
+- go to issues and create a new issue
+
+![width:900px](img/github_workflow01.png)
+![width:900px](img/github_workflow02.png)
+
+---
+
+### GitHub workflow
+
+- give the issue a descriptive title and a description and `Submit new issue`
+
+![](img/github_workflow03.png)
+
+---
+
+### GitHub workflow
+
+- if you decide to work on the issue (own repository), `Create a branch` via the issue
+
+![](img/github_workflow04.png)
+
+---
+
+### GitHub workflow
+
+- `Change branch source` to `develop` and `Create branch`
+
+![](img/github_workflow05-06.png)
+
+---
+
 - release and semantic versioning
 - licensing
 
