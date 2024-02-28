@@ -480,7 +480,7 @@ $ git push
 - after the reviewer left their comments and suggestions, you can address them one by one by replying or applying the suggested changes
 - whenever a certain comment/suggestion is handled (discussion comes to conclusion, suggestion was applied), you can resolve it
 
-![](img/github_workflow22.png)
+![width:700px](img/github_workflow22.png)
 
 ---
 
@@ -541,7 +541,7 @@ $ git push
 
 - when you are satisfied with your release, `Publish release`
 
-![](img/github_release04.png)
+![width:700px](img/github_release04.png)
 
 ---
 
