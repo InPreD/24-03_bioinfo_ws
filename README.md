@@ -235,11 +235,11 @@ jobs:
     name: Run unit tests
     runs-on: ubuntu-latest
     steps:
-      - 
+      -
         name: Check out the repo
         uses: actions/checkout@v4
-      - 
-        name: Unit testing 
+      -
+        name: Unit testing
         uses: fylein/python-pytest-github-action@v2
         with:
           args: pip3 install -r requirements.txt && pytest
@@ -257,13 +257,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - 
+      -
         name: Check out the repo
         uses: actions/checkout@v4
       -
         name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
-      - 
+      -
         name: Docker Meta
         id: meta
         uses: docker/metadata-action@v5
@@ -275,13 +275,13 @@ jobs:
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
-      - 
+      -
         name: Login to Dockerhub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - 
+      -
         name: Build and push image to Docker Hub
         uses: docker/build-push-action@v5
         with:
@@ -609,13 +609,8 @@ or via browser at <https://github.com/nextflow-io/nextflow/releases>
 
 ### Something
 
+- nf-core template
 - stubbing
-
----
-
-## 3. Nextflow
-
-### nf-core template
 
 ---
 
@@ -673,14 +668,108 @@ or via browser at <https://github.com/nextflow-io/nextflow/releases>
 
 ---
 
-## 5. Python
+## 5. Python project
 
-- general (best practice, cli)
-- unit testing (pytest)
+### Repository structure
 
---- 
+- consistency/standard
+- keep main script short and sweet - functionality in modules
 
-### Resources
+```python
+#!/usr/local/bin/python
 
-- [nf-core](https://nf-co.re/)
+from my_module import main
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+### Repository structure
+
+- module folder should contain `__init__.py`
+- keep functions short and try to refactor big functions
+- leave descriptive comments in code
+- use libraries to make your life easier
+  - `pandas`: csv/tsv files
+  - `click` or `argparse`: define cli input flags
+- introduce proper exception handling
+- logging with log levels
+
+---
+
+### Repository structure
+
+#### Unit testing
+
+- `pytest` for testing
+- include unit tests for functions, preferable table-driven
+
+```python
+def addition(x, y):
+  return x+y
+```
+
+```python
+import pytest
+
+@pytest.mark.parametrize("x, y, z", [(1, 1, 2), (1, -1, 0)])
+def test_eval(x, y, z):
+    assert addition(x, y) == z
+```
+
+```bash
+$ pytest
+```
+
+---
+
+### Repository structure
+
+- include test data for unit testing if necessary
+- create container image from project, preferably docker
+- include all necessary dependencies in `requirements.txt` (locked versions)
+- add GitHub actions for testing, linting, building, etc.
+- preferable include a devcontainer definition
+- `README.md` and other `docs`
+
+---
+
+### Repository structure
+
+```bash
+/repo
+|-- .devcontainer
+|   `-- devcontainer.json
+|-- .github
+|   `-- workflows
+|       `-- main.yml
+|-- .gitignore
+|-- Dockerfile
+|-- docs
+|-- LICENSE
+|-- README.md
+|-- my_tool.py
+|-- my_module
+|   |-- __init__.py
+|   |-- my_module.py
+|   `-- tests
+|       |-- __init__.py
+|       `-- my_module_test.py
+|-- requirements.txt
+`-- test
+```
+
+---
+
+## 5. Resources
+
+- [pandas](https://pandas.pydata.org/)
+- [click](https://click.palletsprojects.com/en/8.1.x/)
+- [argparse](https://docs.python.org/3/library/argparse.html)
+- [exception handling](https://www.geeksforgeeks.org/python-exception-handling/)
+- [logging](https://realpython.com/python-logging/)
 - [pytest unittesting](https://www.datacamp.com/tutorial/pytest-tutorial-a-hands-on-guide-to-unit-testing)
+- [inpred dockerhub](https://hub.docker.com/u/inpred)
+- [devcontainers](https://containers.dev/)
