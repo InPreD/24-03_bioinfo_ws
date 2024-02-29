@@ -643,7 +643,7 @@ or via browser at <https://github.com/nextflow-io/nextflow/releases>
 
 ### Overview
 
-![](img/tso500_nxf_workflow01.png)
+![width:800px](img/tso500_nxf_workflow01.png)
 
 ---
 
@@ -665,7 +665,7 @@ or via browser at <https://github.com/nextflow-io/nextflow/releases>
 
 ---
 
-## 4 Resources
+## 4. Resources
 
 - [repository](https://github.com/InPreD/tso500_nxf_workflow)
 - [local_app_prepper](https://github.com/InPreD/local_app_prepper)
