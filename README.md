@@ -607,16 +607,19 @@ or via browser at <https://github.com/nextflow-io/nextflow/releases>
 
 ## 3. Nextflow
 
-### Best practice
+### Something
 
-- containerized processes
+- stubbing
+
+---
+
+## 3. Nextflow
+
+### nf-core template
 
 ---
 
 ## 3. Resources
-
-- nf-core template
-- stubbing
 
 - [nextflow.io](https://nextflow.io/)
 - [nf-co.re](https://nf-co.re/)
@@ -626,8 +629,47 @@ or via browser at <https://github.com/nextflow-io/nextflow/releases>
 
 ## 4. `tso500_nxf_workflow`
 
-- status
-- demonstration 
+### Status update
+
+- modified nf-core template (removed unnecessary functionality, config and metadata files)
+- added devcontainer to have controlled environment (dind and sind available)
+- stubbing data available
+- containing three modules so far (`localapp_prepper`, `LocalApp`, `dumpsoftwareversions`)
+- using nf-validation plugin
+
+---
+
+## 4. `tso500_nxf_workflow`
+
+### Overview
+
+![](img/tso500_nxf_workflow01.png)
+
+---
+
+## 4. `tso500_nxf_workflow`
+
+### Demonstration
+
+---
+
+## 4. `tso500_nxf_workflow`
+
+### Outlook
+
+- `samplesheet_generator`
+- `tsoppi` (requires some restructuring)
+- `PRONTO`
+- include configuration files for each node
+- Documentation
+
+---
+
+## 4 Resources
+
+- [repository](https://github.com/InPreD/tso500_nxf_workflow)
+- [local_app_prepper](https://github.com/InPreD/local_app_prepper)
+- [samplesheet_generator](https://github.com/InPreD/samplesheet_generator)
 
 ---
 
