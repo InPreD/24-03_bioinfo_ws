@@ -567,9 +567,60 @@ $ git push
 
 ## 3. Nextflow
 
-- general (install, best practice)
+### Short introduction
+
+- workflow manager that enables scalable and reproducible scientific workflows using software containers
+- an extension of groovy which is object-oriented programming language for the Java platform
+- **nf-core**: project/community that develops framework for nextflow including guidelines, tools, modules, subworkflows, pipelines and test data
+
+---
+
+## 3. Nextflow
+
+### Requirements
+
+- POSIX compatible system (e.g. Linux, Os X)
+- Bash
+- Java ≥ 11 / ≤ 21
+- Docker/Singularity
+
+---
+
+## 3. Nextflow
+
+### Installation
+
+```bash
+$ curl -s https://get.nextflow.io | bash
+$ chmod +x nextflow
+```
+
+or
+
+```bash
+$ wget -O nextflow https://github.com/nextflow-io/nextflow/releases/download/v23.10.1/nextflow-23.10.1-all
+```
+
+or via browser at <https://github.com/nextflow-io/nextflow/releases>
+
+---
+
+## 3. Nextflow
+
+### Best practice
+
+- containerized processes
+
+---
+
+## 3. Resources
+
 - nf-core template
 - stubbing
+
+- [nextflow.io](https://nextflow.io/)
+- [nf-co.re](https://nf-co.re/)
+- [nf-core github](https://github.com/nf-core)
 
 ---
 
