@@ -7,6 +7,8 @@ theme: default
 
 A two-day workshop for bioinformaticians and molecular biologists with focus on the TSO500 pipeline in InPreD
 
+<https://inpred.github.io/24-03_bioinfo_ws/>
+
 ![bg right](img/bergen01.png)
 
 ---
