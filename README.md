@@ -192,6 +192,7 @@ git config --global user.email <your email>
 - each new feature resides in its own branch (feature branch)
 - feature branch is generally created off latest `develop` commit
 - upon feature completion, feature branch is merged into `develop`
+- whenever a new release is ready, merge `develop` into `main` and tag it
 
 ---
 
